@@ -472,7 +472,7 @@ def populate(engine: Engine, data_path: str):
         INSERT INTO movies (
         id,title,genre,description,director,actors,movie_date,runtime,rating,votes,revenue,metascore)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
-    cursor.executemany(insert_movies, movie_record_generator(os.path.join(data_path, 'Data100Movies.csv')))
+    cursor.executemany(insert_movies, movie_record_generator(os.path.join(data_path, 'Data1000Movies.csv')))
 
     insert_genres = """
         INSERT INTO genres (
