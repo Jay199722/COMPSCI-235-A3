@@ -233,7 +233,7 @@ def load_movies_and_genres(data_path: str, repo: MemoryRepository):
     directors = dict()
     actors = dict()
 
-    for data_row in read_csv_file(os.path.join(data_path, 'Data100Movies.csv')):
+    for data_row in read_csv_file(os.path.join(data_path, 'Data1000Movies.csv')):
 
         movie_key = int(data_row[0])
         movie_genres = data_row[2].lower().split(",")
